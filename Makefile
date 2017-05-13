@@ -25,8 +25,8 @@ LD     := g++
 AR     := ar rc
 RANLIB := ranlib
 
-DEBUG_CFLAGS     := -Wall -Wno-format -g -DDEBUG
-RELEASE_CFLAGS   := -Wall -Wno-unknown-pragmas -Wno-format -O3
+DEBUG_CFLAGS     := -Wall -Wno-format -g -DDEBUG -fPIC -g -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.8.sdk -mmacosx-version-min=10.4
+RELEASE_CFLAGS   := -Wall -Wno-unknown-pragmas -Wno-format -O3 -fPIC -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.8.sdk -mmacosx-version-min=10.4
 
 LIBS		 :=
 
