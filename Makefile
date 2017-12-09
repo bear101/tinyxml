@@ -20,13 +20,13 @@ TINYXML_USE_STL := NO
 #****************************************************************************
 
 CC     := gcc
-CXX    := g++
-LD     := g++
+CXX    := clang++
+LD     := clang++
 AR     := ar rc
 RANLIB := ranlib
 
-DEBUG_CFLAGS     := -Wall -Wno-format -g -DDEBUG
-RELEASE_CFLAGS   := -Wall -Wno-unknown-pragmas -Wno-format -O3
+DEBUG_CFLAGS     := -Wall -Wno-format -g -DDEBUG $(CPPFLAGS)
+RELEASE_CFLAGS   := -Wall -Wno-unknown-pragmas -Wno-format -O3 $(CPPFLAGS)
 
 LIBS		 :=
 
